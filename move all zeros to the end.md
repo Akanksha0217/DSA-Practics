@@ -8,11 +8,27 @@ You need to move all zeros to the end, while keeping the order of non-zero eleme
 ## Method 1:
 ### Using Python
 
+```
+arr= [1, 2, 0, 0, 3, 0, 4,5]
+count =0  
+
+for i in range(0,len(arr)):
+    if arr[i] !=0:
+        arr[count]=arr[i]
+        count += 1
+    
+while count<len(arr):
+    arr[count]==0
+    count+=1
+
+print(arr)
+    
+```
 
 ### Using Js
 ```
 let arr = [1, 2, 0, 0, 3, 0, 4];
-let count = 0; // position to place non-zero elements
+let count = 0; 
 
 // Move all non-zero elements to the front
 for (let i = 0; i < arr.length; i++) {
@@ -29,7 +45,9 @@ while (count < arr.length) {
 console.log(arr);
 ```
 
+## Method 2:
 
+```
 ### Using Js
 ```
 let arr = [1, 2, 0, 0, 3, 0, 4];
