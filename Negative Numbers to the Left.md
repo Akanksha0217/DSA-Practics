@@ -49,6 +49,7 @@ print(move_negative([3, -2, 5,-2, -1, 6, -3]))
 ```
 ### Using JS M1 :
 ```
+let arr = [3, -2, 5, -1, 6, -3];
 let ngativeArr = [];
 let postiveArr = [];
 
@@ -62,9 +63,7 @@ for (let num of arr) {
 }
 let arr2 = ngativeArr + postiveArr;
 console.log(arr2);
-let arr3 = ngativeArr;
-postiveArr;
-console.log(arr2);
+
 ```
 
 ### Using JS M2:
