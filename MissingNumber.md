@@ -50,7 +50,7 @@ console.log(missN([1, 2, 3, 4, 6]));
 let arr = [1, 2, 4, 5];
 let n = arr.length + 1;
 s = new Set(arr);
-console.log(s);
+
 
 for (let i = 1; i <= n; i++) {
   if (!s.has(i)) {
