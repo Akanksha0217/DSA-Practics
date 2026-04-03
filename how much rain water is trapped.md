@@ -1,0 +1,47 @@
+# 🚀 Question
+
+Find how much rain water is trapped
+## 🧠 Problem
+Given heights of bars:
+👉 Calculate how much water can be stored between them
+
+## Solution
+## Using Python
+```
+arr=[0,1,0,2,1,0,1]
+n= len(arr)
+water=0
+for i in range(len(arr)):
+    left_max=max(arr[:i+1])
+    right_max=max(arr[i:])
+
+    water += min(left_max,right_max) -  arr[i]
+
+print(water)
+```
+
+## Using JS
+```
+arr = [0,1,0,2,1,0,1,3,2,1,2,1]
+left = 0
+right = len(arr) - 1
+left_max = 0
+right_max = 0
+water = 0
+
+while left < right:
+    if arr[left] < arr[right]:
+        if arr[left] >= left_max:
+            left_max = arr[left]
+        else:
+            water += left_max - arr[left]
+        left += 1
+    else:
+        if arr[right] >= right_max:
+            right_max = arr[right]
+        else:
+            water += right_max - arr[right]
+        right -= 1
+
+print(water)
+```
