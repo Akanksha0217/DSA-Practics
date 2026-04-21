@@ -3,7 +3,7 @@
 A palindrome is a word that reads the same forward and backward.
 
 ## Solution
-### M1:
+## M1:
 #### Using Python 
 ```
 s="madam"
@@ -27,7 +27,7 @@ if (reverse == str) {
 }
 ```
 
-### M2:
+## M2:
 ### Using Python
 ```
 s = "madam"
@@ -55,4 +55,21 @@ for (let i = 0; i < str.length / 2; i++) {
 }
 
 console.log(isPalindrome);
+```
+
+## Method 3
+### Using Python
+```
+n=1234
+num=n
+result=0
+while num>0:
+    digit = num % 10
+    result = result * 10 + digit
+    num = num // 10
+
+
+if n==result:
+    print("Palindrome")
+else:    print("Not Palindrome")
 ```
