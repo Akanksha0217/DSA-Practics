@@ -16,6 +16,7 @@ capacity = 7
 ✅ Output
 9
 
+
 # Solution
 ## Using Python 
 ```
@@ -43,6 +44,7 @@ print(knapsack(0, capacity))
 ```
 
 ## Using JS
+
 ```
 let weights = [1,3,4,5];
 let values = [1,4,5,7];
