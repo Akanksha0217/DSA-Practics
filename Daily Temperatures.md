@@ -43,7 +43,7 @@ for (let i = 0; i < temps.length; i++) {
 console.log(result);
 ```
 
-## Method 1: Using Js 
+## Method 2: Using Js 
 - Time Complexity:O(n) 
 - Space Complexity :O(n)
 ```
