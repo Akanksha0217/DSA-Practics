@@ -42,3 +42,24 @@ for (let i = 0; i < temps.length; i++) {
 
 console.log(result);
 ```
+
+## Method 1: Using Js 
+- Time Complexity:O(n) 
+- Space Complexity :O(n)
+```
+let temps = [73,74,75,71,69,72,76,73];
+
+let n = temps.length;
+let res = new Array(n).fill(0);
+let stack = [];
+
+for (let i = 0; i < n; i++) {
+  while (stack.length && temps[i] > temps[stack[stack.length - 1]]) {
+    let prev = stack.pop();
+    res[prev] = i - prev;
+  }
+  stack.push(i);
+}
+
+console.log(res);
+```
