@@ -63,3 +63,22 @@ for (let i = 0; i < n; i++) {
 
 console.log(res);
 ```
+
+## Using Python
+- Time Complexity:O(n) 
+- Space Complexity :O(n)
+```
+temps = [73,74,75,71,69,72,76,73]
+
+n = len(temps)
+res = [0] * n
+stack = []  # store indexes
+
+for i in range(n):
+    while stack and temps[i] > temps[stack[-1]]:
+        prev = stack.pop()
+        res[prev] = i - prev
+    stack.append(i)
+
+print(res)
+```
