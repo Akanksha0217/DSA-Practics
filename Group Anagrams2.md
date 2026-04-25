@@ -13,9 +13,36 @@ Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
 
 ## Using Python
 ```
+strs = ["eat","tea","tan","ate","nat","bat"]
 
+mp = {}
+
+for word in strs:
+    key = ''.join(sorted(word))
+
+    if key not in mp:
+        mp[key] = []
+
+    mp[key].append(word)
+
+print(list(mp.values()))
 ```
 
 ## Using JS
 ```
+let strs = ["eat","tea","tan","ate","nat","bat"];
+
+let map = {};
+
+for (let word of strs) {
+  let key = word.split('').sort().join('');
+
+  if (!map[key]) {
+    map[key] = [];
+  }
+
+  map[key].push(word);
+}
+
+console.log(Object.values(map));
 ```
