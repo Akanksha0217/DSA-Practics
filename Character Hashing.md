@@ -9,6 +9,8 @@ You are given a string s and other string q ,you are .
 
 # Solution
 ## Using Python
+- Time complexity:O(n+m)
+- Space Complexity :O(1)
 ```
 s="abcdxaayzw"
 q=["d","x","a","z"]
