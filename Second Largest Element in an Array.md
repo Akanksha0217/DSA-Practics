@@ -5,23 +5,43 @@ Find the second largest number in the array.
 
 ## solution 
 ## method 1:
+#### Using python
+- time complexity :O(2N)
+- space complexity : O(1)
+```
+nums = [3,2,1,5,6,4]
+largest = nums[0]
+second_largest = nums[0]
+for i in range(len(nums)-1):
+    if nums[i] > largest:
+        largest = nums[i]
+
+for i in range(len(nums)-1):
+    if nums[i]>second_largest and nums[i] != largest:
+        second_largest = nums[i]
+print(second_largest)
+
+
+```
+
+## method 2:optimal solution
 #### Using python 
+- time complexity :O(N)
+- space complexity : O(1)
 ```
-arr=[1,2,3,4,6,7,1,9]
-max_num=arr[0]
-second=0
+nums = [3,2,1,5,6,4]
+largest = float('-inf')
+second_largest  = float('-inf')
+for i in range(len(nums)):
+   if nums[i]>largest:
+       second_largest = largest
+       largest = nums[i]
+   elif nums[i]>second_largest and nums[i] != largest:
+       second_largest = nums[i]
+print(second_largest)
 
-for num in arr:
-    if num>max_num:
-        second= max_num
-        max_num=num
-    if num>second and num <max_num:
-        second=num
-
-
-print("max number in arr is :",max_num)  
-print("second number in arr is :",second)  
 ```
+
 
 #### Using JS
 ```
