@@ -11,6 +11,8 @@ output:3
 
 ## solution
 ### M1 : Python using Numerical formula 
+- Time Complexity:O(N)
+- space complexity :O(1)
 ```
 def missingNumber(arr):
     n=len(arr)
