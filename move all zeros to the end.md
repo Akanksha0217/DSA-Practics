@@ -18,7 +18,7 @@ for i in range(0,len(arr)):
         count += 1
     
 while count<len(arr):
-    arr[count]==0
+    arr[count]=0
     count+=1
 
 print(arr)
@@ -46,8 +46,6 @@ console.log(arr);
 ```
 
 ## Method 2:
-
-```
 ### Using Js
 ```
 let arr = [1, 2, 0, 0, 3, 0, 4];
@@ -65,5 +63,30 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(arr1.concat(arr2));
+```
 
+## Method 3:
+### USing Python
+```
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        if len(nums)==1:
+            return
+        i=0
+        while i <len(nums):
+            if nums[i]==0:
+                break
+            i+=1
+        if i==len(nums):
+            return
+        j=i+1
+        while j<len(nums):
+            if nums[j]!=0:
+                nums[i],nums[j]=nums[j],nums[i]
+                i+=1
+            j+=1
+        
 ```
